@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="page-header">
     <div class="row">
       <div class="col-md-6">
@@ -48,4 +48,137 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+
+<div class="page-wrapper">
+    <div class="page-wrapper-row full-height">
+      <div class="page-wrapper-middle">
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+          <!-- BEGIN CONTENT -->
+          <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <!-- BEGIN PAGE CONTENT BODY -->
+            <div class="page-content">
+              <div class="container">
+               
+                <!-- BEGIN PAGE CONTENT INNER -->
+                <div class="page-content-inner">
+                  <div class="mt-content-body">
+  
+                    <div class="row">
+                      <div class="col-md-12">
+                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                        <div class="portlet light portlet-fit bordered">
+                          <div class="portlet-title">
+                            <div class="caption">
+                              <span class="caption-subject font-red sbold uppercase">{{ user.username }} Infomation</span>
+                            </div>
+                          </div>
+                          <div class="portlet-body">
+                                <div class="form-body detail-body">
+                                 <div class="row text-capitalize">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      First Name
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      {{ user.firstName }}
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                <div class="row text-capitalize">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      Last Name
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      {{ user.lastName }}
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="row text-capitalize">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      User Name
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      {{ user.username }}
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="row">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      Email
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      {{ user.email }}
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="row text-capitalize">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      Roles
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      <span ng-repeat="roles in user.roles">{{ roles }},</span>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="row text-capitalize">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-12 col-md-2 pad-top-0">
+                                      Last Name
+                                    </label>
+                                    <div class="col-md-2 col-sm-12">
+                                      {{ user.lastName }}
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                <div class="row">
+                                <div class="pull-right"
+                                   ng-show="user">
+                                <a class="btn btn-primary"
+                                   ui-sref="admin.user-edit({ userId: user._id })">
+                                  <i class="glyphicon glyphicon-edit"></i>
+                                </a>
+                                <a class="btn btn-primary" ng-click="remove();" ng-if="user._id !== authentication.user._id">
+                                  <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                              </div>
+                          </div>
+                                </div>
+                              
+                          </div>
+                        </div>
+                        <!-- END EXAMPLE TABLE PORTLET-->
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+                <!-- END PAGE CONTENT INNER -->
+              </div>
+            </div>
+            <!-- END PAGE CONTENT BODY -->
+            <!-- END CONTENT BODY -->
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+      </div>
+    </div>
+  </div>

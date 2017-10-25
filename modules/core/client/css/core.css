@@ -1,5 +1,5 @@
 .content {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -34,4 +34,119 @@ a:hover .header-profile-image {
 }
 .has-error .help-inline.error-text {
   display: inline;
+}
+.content {
+  margin-top: 50px;
+}
+.undecorated-link:hover {
+  text-decoration: none;
+}
+[ng\:cloak],
+[ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.header-profile-image {
+  opacity: 0.8;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open .header-profile-image,
+a:hover .header-profile-image {
+  opacity: 1;
+}
+.user-header-dropdown-toggle {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+.error-text {
+  display: none;
+}
+.has-error .help-block.error-text {
+  display: block;
+}
+.has-error .help-inline.error-text {
+  display: inline;
+}
+.login-logo{
+  left: 50% !important;
+  transform: translateX(-50%);
+  top: 15% !important;
+  max-width: 300px;
+}
+
+.logo-default{
+  margin: 0 !important;
+  max-width: 200px;
+}
+
+.page-logo{
+  display: flex !important;
+  align-items: center;
+}
+
+.admin-login{
+  min-height: 100%;
+  background: url(/../../modules/users/client/img/homepage-splash.jpg);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  left:0px;
+}
+
+.login .logo{
+  margin:0 !important;
+}
+
+.page-logo{
+  display: flex !important;
+  align-items: center;
+}
+
+.detail-body .form-group{
+  margin-bottom: 30px;
+}
+
+.clearfix2{
+  margin: 10px 0;
+}
+
+.login-container{
+  background: #eb5d32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container h1{
+  color: #fff !important;
+}
+
+.login-container input{
+  border: 0;
+  border-bottom: 1px solid #fff !important;
+  background: none;
+  padding: 0 15px !important;
+  border-radius: 0;   
+}
+.login-container label{
+  color: #fff;
+}
+.forgot-password a{
+  color: #fff !important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color: #fff !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+color: #fff !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+color: #fff !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+color: #fff !important;
 }

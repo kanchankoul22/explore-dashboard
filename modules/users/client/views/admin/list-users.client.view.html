@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="page-header">
     <div class="row">
       <div class="col-md-4">
@@ -18,4 +18,86 @@
   </div>
 
   <pagination boundary-links="true" max-size="8" items-per-page="itemsPerPage" total-items="filterLength" ng-model="currentPage" ng-change="pageChanged()"></pagination>
-</section>
+</section> -->
+
+<div class="page-wrapper">
+    <div class="page-wrapper-row full-height">
+      <div class="page-wrapper-middle">
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+          <!-- BEGIN CONTENT -->
+          <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <!-- BEGIN PAGE CONTENT BODY -->
+            <div class="page-content">
+              <div class="container">
+                
+                <!-- BEGIN PAGE CONTENT INNER -->
+                <div class="page-content-inner">
+                  <div class="mt-content-body">
+  
+                   <div class="row">
+                    <div class="col-md-12">
+                      <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                      <div class="portlet light portlet-fit bordered">
+                        <div class="portlet-title">
+                          <div class="caption">
+                            <span class="caption-subject font-red sbold uppercase">List Users</span>
+                          </div>
+  
+                        </div>
+                        <div class="portlet-body">
+                          <div class="row">
+                          <div class="table-scrollable table-responsive">
+                            <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                              <thead>
+                                <tr>
+                                  <th> S.No </th>
+                                  <th> Username </th>
+                                  <th>First Name</th>
+                                  <th>Email</th>
+                                  <th>DisplayName</th>
+                                  <th>Chain</th>
+                                  <th>Vendor</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="odd gradeX" id="tr1" ng-repeat="user in pagedItems">
+                                  <td> {{ $index+1 }} </td>
+                                  <td><a ui-sref="admin.user({userId: user._id})" > {{user.username}} </a></td>
+                                  <td>{{ user.firstName }}</td>
+                                 <td>{{ user.email }}</td>
+                                 <td>{{ user.displayName }}</td>
+                                 <td>{{ user.chain }}</td>
+                                 <td>{{ user.vendor }}</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                            </div>
+                            <pagination boundary-links="true" items-per-page="itemsPerPage" total-items="filterLength" ng-model="currentPage" ng-change="pageChanged()" class="pull-right"></pagination>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END PAGE CONTENT INNER -->
+  
+            </div>
+          </div>
+          <!-- END PAGE CONTENT BODY -->
+          <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+          <i class="icon-login"></i>
+        </a>
+        <!-- END QUICK SIDEBAR -->
+      </div>
+      <!-- END CONTAINER -->
+    </div>
+  </div>
+  </div>

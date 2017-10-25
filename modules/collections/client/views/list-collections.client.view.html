@@ -1,0 +1,31 @@
+<!-- <section>
+  <div class="page-header">
+    <h1>Collections</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="collection in vm.collections"
+       ui-sref="collections.view({ collectionId: collection._id })"
+       class="list-group-item">
+       <span ng-if="collection.user" ng-bind="collection.user.displayName"></span>
+        <span ng-if="!collection.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="collection.name"></h4>
+   
+    </a>
+  </div> -->
+  <section>
+  <div class="page-header">
+    <h1>Collections</h1>
+    </div>
+    <div class="list-group">
+    <table>
+      <tr ng-repeat="userdata in vm.getUrlData.data.items" ui-sref="collections.view({ collectionId: collection._id })"
+      class="list-group-item">
+        <td>{{ $index }}-{{ userdata.address }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.collections.$resolved && !vm.collections.length">
+    No Collections yet, why don't you <a ui-sref="collections.create">create one</a>?
+  </div>
+</section>
