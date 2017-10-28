@@ -16,7 +16,7 @@
       </thead>
       <tbody>
        <tr ng-repeat="collections in vm.collections">
-        <td>{{ collections.title }}</td>
+        <td><a ui-sref="collections.view({ collectionId: collections._id })">{{ collections.title }}</a></td>
         <td>{{ collections.imageWidth }}</td>
         <td>{{ collections.imageHeight }}</td>
         <td>{{ collections.priority }}</td>
