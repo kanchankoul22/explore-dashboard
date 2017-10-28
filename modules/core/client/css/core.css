@@ -55,6 +55,9 @@ a:hover .header-profile-image {
   border-radius: 50%;
   margin-right: 5px;
 }
+.no-pad{
+  padding: 0;
+}
 .open .header-profile-image,
 a:hover .header-profile-image {
   opacity: 1;

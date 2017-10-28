@@ -5,6 +5,7 @@ module.exports = {
     lib: {
       css: [
         'public/lib/bootstrap/dist/css/bootstrap.css',
+        'public/lib/isteven-angular-multiselect/isteven-multi-select.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.css'
       ],
       js: [
@@ -15,6 +16,7 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        'public/lib/isteven-angular-multiselect/isteven-multi-select.js',
         'public/lib/angular-file-upload/angular-file-upload.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
       ],

@@ -1,0 +1,50 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.datafilter._id ? 'Edit Datafilter' : 'New Datafilter'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.datafilterForm" class="form-horizontal" ng-submit="vm.save(vm.form.datafilterForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.datafilter.name" id="name" class="form-control" placeholder="Name" required>
+            
+            <label class="control-label" for="type">Type</label>
+            <input name="type" type="text" ng-model="vm.datafilter.type" id="type" class="form-control" placeholder="Name" required>
+            
+              
+                <div class="form-group" show-errors>
+                  <label class="control-label label1 col-md-1">Criteria
+
+                  </label>
+                  <input name="type" type="text" ng-model="vm.datafilter.criteria" id="type" class="form-control" placeholder="Name" required>
+                 
+                   
+                <label class="control-label label1 col-md-1">Start Time</label>
+                <div uib-timepicker ng-model="vm.datafilter.startTime"></div>
+                <label class="control-label label1 col-md-1">End Time</label>
+                <div uib-timepicker ng-model="vm.datafilter.endTime"></div>
+                
+                
+                
+              
+
+
+                  
+                  <label class="control-label" for="type">Sort By</label>
+                  <input name="type" type="text" ng-model="vm.datafilter.sortBy" id="type" class="form-control" placeholder="Name" required>
+                  
+                  
+
+                    
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.datafilter._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

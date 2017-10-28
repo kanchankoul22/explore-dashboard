@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Datafilters</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="datafilter in vm.datafilters"
+       ui-sref="datafilters.view({ datafilterId: datafilter._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="datafilter.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="datafilter.user" ng-bind="datafilter.user.displayName"></span>
+        <span ng-if="!datafilter.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="datafilter.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.datafilters.$resolved && !vm.datafilters.length">
+    No Datafilters yet, why don't you <a ui-sref="datafilters.create">create one</a>?
+  </div>
+</section>

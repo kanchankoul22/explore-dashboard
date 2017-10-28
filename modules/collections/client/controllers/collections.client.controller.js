@@ -18,6 +18,52 @@
     vm.remove = remove;
     vm.save = save;
 
+
+
+    $scope.dataFilterType = [
+      {
+        name: '<strong>Top-Rated</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Express-Delivery</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Best Offers</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong> Browse By Cuisine</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Popular near You</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>New on Foodpanda</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Healthy Bites</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Chai/Coffee</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>No Minimum order</strong>',
+        msGroup: true
+      },
+      {
+        name: '<strong>Meals Under Rs200</strong>',
+        msGroup: true
+      },
+
+    ];
+
     // Remove existing Collection
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {

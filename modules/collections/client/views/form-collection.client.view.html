@@ -6,15 +6,54 @@
     <form name="vm.form.collectionForm" class="form-horizontal" ng-submit="vm.save(vm.form.collectionForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="name">Collection Name</label>
-          <input name="name" type="text" ng-model="vm.collection.name" id="name" class="form-control" placeholder="Name" required>
-          <div ng-messages="vm.form.collectionForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Collection name is required.</p>
-          </div>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.collection._id ? 'Update' : 'Create'}}</button>
-        </div>
+                  
+<div class="form-group" show-errors>
+    <label class="control-label" for="name">Title</label>
+    <input name="name" type="text" ng-model="vm.collections.title" id="name" class="form-control" placeholder="Name" required>
+    <div ng-messages="vm.form.collectionForm.name.$error" role="alert">
+      <p class="help-block error-text" ng-message="required">Title is required.</p>
+     
+      <label class="control-label" for="imagewidth">ImageWidth</label>
+      <input name="imagewidth" type="text" ng-model="vm.collections.imageWidth" id="imagewidth" class="form-control" placeholder="Name" required>
+      <div ng-messages="vm.form.collectionForm.imagewidth.$error" role="alert">
+        <p class="help-block error-text" ng-message="required">Image width is required.</p>
+     
+        <label class="control-label" for="imageheight">Image Height</label>
+        <input name="imageheight" type="text" ng-model="vm.collections.imageHeight" id="imageheight" class="form-control" placeholder="Name" required>
+        <div ng-messages="vm.form.collectionForm.imageheight.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">Image Height is required.</p>
+     
+          <label class="control-label" for="key">Key</label>
+          <input name="key" type="text" ng-model="vm.collections.key" id="key" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.collectionForm.key.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Key is required.</p>
+     
+            <label class="control-label" for="priority">Priority</label>
+            <input name="priority" type="text" ng-model="vm.collections.priority" id="priority" class="form-control" placeholder="Name" required>
+            <div ng-messages="vm.form.collectionForm.priority.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Priority is required.</p>
+     
+              <label class="control-label" for="productdimension">Product_Dimension_config</label>
+              <input name="productdimension" type="text" ng-model="vm.collections.product_dimension_config" id="productdimension" class="form-control" placeholder="Productdimension" required>
+              <!-- <div ng-messages="vm.form.collectionForm.productdimension.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">product dimension config is required.</p> -->
+     
+                <label class="control-label" for="Datafilter">Data Filter</label>
+                
+                <div isteven-multi-select 
+                input-model="dataFilterType"
+                output-model="outputBrowsers"
+                button-label="icon name"
+                item-label="icon name maker"
+                tick-property="ticked"
+                is-disabled = false
+                helper-elements="none all">
+            </div>
+            
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-default">{{vm.collection._id ? 'Update' : 'Create'}}</button>
+                    </div>
+            
                 <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>
         </div>

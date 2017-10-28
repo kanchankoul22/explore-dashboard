@@ -17,6 +17,8 @@ module.exports = function(app) {
     .put(collections.update)
     .delete(collections.delete);
 
+      
   // Finish by binding the Collection middleware
   app.param('collectionId', collections.collectionByID);
+
 };

@@ -39,6 +39,12 @@ exports.invokeRolesPolicies = function () {
       resources: '/api/collections/:collectionId',
       permissions: ['get']
     }]
+  },{
+    roles: ['admin'],
+    allows: [{
+      resources: '/api/collections',
+      permissions: ['get']
+    }]
   }]);
 };
 
