@@ -38,7 +38,7 @@
       </thead>
       <tbody>
        <tr ng-repeat="datafilters in vm.datafilters">
-        <td>{{ datafilters.name }}</td>
+        <td><a ui-sref="datafilters.view({ datafilterId: datafilter._id })">{{ datafilters.name }}</a></td>
         <td>{{ datafilters.type }}</td>
         <td>{{ datafilters.criteria }}</td>
         <td>{{ datafilters.startTime }}</td>
