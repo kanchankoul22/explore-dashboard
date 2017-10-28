@@ -5,9 +5,9 @@
     .module('datafilters')
     .controller('DatafiltersListController', DatafiltersListController);
 
-  DatafiltersListController.$inject = ['DatafiltersService', '$scope'];
+  DatafiltersListController.$inject = ['DatafiltersService', '$scope', 'moment' ,'$window'];
 
-  function DatafiltersListController(DatafiltersService, $scope) {
+  function DatafiltersListController(DatafiltersService, $scope, moment, $window) {
     var vm = this;
     vm.remove = remove;
     $scope.mytime = new Date();
