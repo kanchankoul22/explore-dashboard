@@ -8,11 +8,13 @@
 
   DatafiltersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'datafilterResolve'];
 
-  function DatafiltersController ($scope, $state, $window, Authentication, datafilterResolve,datafilter) {
+  function DatafiltersController ($scope, $state, $window, Authentication, datafilter) {
     var vm = this;
 
     vm.authentication = Authentication;
     vm.datafilter = datafilter;
+    vm.datafilter.startTime = new Date();
+    vm.datafilter.endTime = new Date();
     vm.error = null;
     vm.form = {};
     vm.remove = remove;
