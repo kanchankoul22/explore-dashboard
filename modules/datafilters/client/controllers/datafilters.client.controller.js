@@ -13,6 +13,8 @@
 
     vm.authentication = Authentication;
     vm.datafilter = datafilter;
+    vm.datafilter.startTime = new Date();
+    vm.datafilter.endTime = new Date();
     vm.error = null;
     vm.form = {};
     vm.remove = remove;
