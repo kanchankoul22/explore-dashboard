@@ -9,35 +9,23 @@
                   
 <div class="form-group" show-errors>
     <label class="control-label" for="name">Title</label>
-    <input name="name" type="text" ng-model="vm.collections.title" id="name" class="form-control" placeholder="Name" required>
-    <div ng-messages="vm.form.collectionForm.name.$error" role="alert">
-      <p class="help-block error-text" ng-message="required">Title is required.</p>
+    <input name="name" type="text" ng-model="vm.collection.title" id="name" class="form-control" placeholder="Name" required>
      
       <label class="control-label" for="imagewidth">ImageWidth</label>
-      <input name="imagewidth" type="text" ng-model="vm.collections.imageWidth" id="imagewidth" class="form-control" placeholder="Name" required>
-      <div ng-messages="vm.form.collectionForm.imagewidth.$error" role="alert">
-        <p class="help-block error-text" ng-message="required">Image width is required.</p>
-     
+      <input name="imagewidth" type="text" ng-model="vm.collection.imageWidth" id="imagewidth" class="form-control" placeholder="Name" required>
+      
         <label class="control-label" for="imageheight">Image Height</label>
-        <input name="imageheight" type="text" ng-model="vm.collections.imageHeight" id="imageheight" class="form-control" placeholder="Name" required>
-        <div ng-messages="vm.form.collectionForm.imageheight.$error" role="alert">
-          <p class="help-block error-text" ng-message="required">Image Height is required.</p>
-     
+        <input name="imageheight" type="text" ng-model="vm.collection.imageHeight" id="imageheight" class="form-control" placeholder="Name" required>
+        
           <label class="control-label" for="key">Key</label>
-          <input name="key" type="text" ng-model="vm.collections.key" id="key" class="form-control" placeholder="Name" required>
-          <div ng-messages="vm.form.collectionForm.key.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Key is required.</p>
-     
+          <input name="key" type="text" ng-model="vm.collection.key" id="key" class="form-control" placeholder="Name" required>
+          
             <label class="control-label" for="priority">Priority</label>
-            <input name="priority" type="text" ng-model="vm.collections.priority" id="priority" class="form-control" placeholder="Name" required>
-            <div ng-messages="vm.form.collectionForm.priority.$error" role="alert">
-              <p class="help-block error-text" ng-message="required">Priority is required.</p>
-     
+            <input name="priority" type="text" ng-model="vm.collection.priority" id="priority" class="form-control" placeholder="Name" required>
+            
               <label class="control-label" for="productdimension">Product_Dimension_config</label>
-              <input name="productdimension" type="text" ng-model="vm.collections.product_dimension_config" id="productdimension" class="form-control" placeholder="Productdimension" required>
-              <!-- <div ng-messages="vm.form.collectionForm.productdimension.$error" role="alert">
-                <p class="help-block error-text" ng-message="required">product dimension config is required.</p> -->
-     
+              <input name="productdimension" type="text" ng-model="vm.collection.product_dimension_config" id="productdimension" class="form-control" placeholder="Productdimension" required>
+             
                 <label class="control-label" for="Datafilter">Data Filter</label>
                 
                 <div isteven-multi-select 

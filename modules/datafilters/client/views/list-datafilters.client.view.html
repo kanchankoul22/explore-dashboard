@@ -1,17 +1,17 @@
-<section>
+<!-- <section>
   <div class="page-header">
     <h1>Datafilters</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="datafilter in vm.datafilters"
+    <a ng-repeat="datafilters in vm.datafilters"
        ui-sref="datafilters.view({ datafilterId: datafilter._id })"
        class="list-group-item">
       <small class="list-group-item-text">
         Posted on
-        <span ng-bind="datafilter.created | date:'mediumDate'"></span>
+        <span ng-bind="datafilters.created | date:'mediumDate'"></span>
         by
-        <span ng-if="datafilter.user" ng-bind="datafilter.user.displayName"></span>
-        <span ng-if="!datafilter.user">Deleted User</span>
+        <span ng-if="datafilters.user" ng-bind="datafilters.user.displayName"></span>
+        <span ng-if="!datafilters.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" ng-bind="datafilter.name"></h4>
     </a>
@@ -19,4 +19,37 @@
   <div class="alert alert-warning text-center" ng-if="vm.datafilters.$resolved && !vm.datafilters.length">
     No Datafilters yet, why don't you <a ui-sref="datafilters.create">create one</a>?
   </div>
-</section>
+</section> -->
+<section>
+  <div class="page-header">
+    <h1>Data Filters</h1>
+  </div>
+  <div class="list-group">
+    <table class="table table-striped table-bordered table-hover" id="sample_2">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Criteria</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Sort By</th>
+          </tr>
+      </thead>
+      <tbody>
+       <tr ng-repeat="datafilters in vm.datafilters">
+        <td>{{ datafilters.name }}</td>
+        <td>{{ datafilters.type }}</td>
+        <td>{{ datafilters.criteria }}</td>
+        <td>{{ datafilters.startTime }}</td>
+        <td>{{ datafilters.endTime }}</td>
+        <td>
+          
+        <a class="btn btn-primary" ng-click="vm.remove(datafilters);">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
