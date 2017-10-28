@@ -8,24 +8,27 @@
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Name</label>
           <input name="name" type="text" ng-model="vm.datafilter.name" id="name" class="form-control" placeholder="Name" required>
-            
+         </div>
+         <div class="form-group" show-errors>
             <label class="control-label" for="type">Type</label>
             <input name="type" type="text" ng-model="vm.datafilter.type" id="type" class="form-control" placeholder="Name" required>
-            
+            </div>
+
               
                 <div class="form-group" show-errors>
-                  <label class="control-label label1 col-md-1">Criteria
+                  <label class="control-label">Criteria
 
                   </label>
                   <input name="type" type="text" ng-model="vm.datafilter.criteria" id="type" class="form-control" placeholder="Name" required>
-                 
-                   
-                <label class="control-label label1 col-md-1">Start Time</label>
+                </div>
+                <div class="form-group" show-errors> 
+                <label class="control-label">Start Time</label>
                 <div uib-timepicker ng-model="vm.datafilter.startTime"></div>
-                <label class="control-label label1 col-md-1">End Time</label>
+                <label class="control-label">End Time</label>
                 <div uib-timepicker ng-model="vm.datafilter.endTime"></div>
-                
-                
+                </div>
+
+                <div class="form-group" show-errors> 
                 
               
 
