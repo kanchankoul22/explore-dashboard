@@ -5,9 +5,9 @@
     .module('datafilters')
     .controller('DatafiltersListController', DatafiltersListController);
 
-  DatafiltersListController.$inject = ['DatafiltersService', '$scope', 'moment' ,'$window'];
+  DatafiltersListController.$inject = ['DatafiltersService', '$scope','$window','moment'];
 
-  function DatafiltersListController(DatafiltersService, $scope, moment, $window) {
+  function DatafiltersListController(DatafiltersService, $scope, $window, moment) {
     var vm = this;
     vm.remove = remove;
     $scope.mytime = new Date();
@@ -19,11 +19,7 @@
       hstep: [1, 2, 3],
       mstep: [1, 5, 10, 15, 25, 30]
     };
-
-    vm.changeTimezone = function (date) {
-      return moment(date).utcOffset('+05:30').format('HH:mm:ss a');
-    };
-    
+ 
     vm.datafilters = DatafiltersService.query();
     function remove(datafilters) {
       if ($window.confirm('Are you sure you want to delete?')) {
