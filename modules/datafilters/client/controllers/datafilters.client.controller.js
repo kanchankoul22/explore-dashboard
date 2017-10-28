@@ -18,20 +18,6 @@
     vm.remove = remove;
     vm.save = save;
 
-    $scope.criterias = [
-      { type : 'id' },
-      { type : 'cuisines' },
-      { type : 'characterstics' },
-      { type : 'chains' },
-      { type : 'payment type' }
-      
-    ];
-
-
-
-    $scope.changeme = function() {
-      alert('here');
-    };
     // Remove existing Datafilter
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
